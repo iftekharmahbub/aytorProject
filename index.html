@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Aytor</title>
 
     <!-- ============== GOOGLE FONT START ============== -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- ============== GOOGLE FONT END ============== -->
 
     <!-- ============== SLICK ============== -->
@@ -22,7 +24,165 @@
 </head>
 <body>
 
-    <!--  AYTOR  --> 
+    <!-- ============== NAV START ============== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/Logo.png" alt="">
+            </a>
+                <span class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span><i class="fa-solid fa-bars-staggered"></i></span>
+                </span>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="homeActive" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" href="#">Feature's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" href="#">Page's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" href="#">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="icons">
+                    <li class="search_icon"><a href="#"> <span><i class="fa-solid fa-magnifying-glass"></i></span> </a></li>
+                    <li class="user_icon"><a href="#"><span><i class="fa-regular fa-user"></i></span> </a></li>
+                    <li><a href="#"><span><i class="fa-regular fa-heart"></i></span> </a></li>
+                    <li class="shopping"><a href="#"> 
+                            <span><i class="fa-solid fa-bag-shopping"></i></span> 
+                            <span class="zero">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- ====== SEARCH START ====== --> 
+    <div class="search">
+        <form action="" class="search_bar">
+            <input placeholder="search here" type="text">
+            <button>Search</button>
+        </form>
+
+        <div class="cross_btn">
+            <span><i class="fa-solid fa-xmark"></i></span>
+        </div>
+     </div>
+        <!-- ======= SEARCH END ======= -->
+
+        <!-- ======= Log-IN START ======= -->
+    <div class="log_in">
+        <span class="log__close">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+        <div class="log-box shadow my-auto">
+            <h5>Log in</h5>
+            <div class="login__group">
+                <div>
+                   <label for="email" class="login__label form-label">Email</label>
+                   <input type="email" placeholder="Write your email" id="email" class="login__input form-control">
+                </div>
+                
+                <div class="input_pass">
+                   <label for="password" class="login__label form-label">Password</label>
+                   <input type="password" placeholder="Enter your password" id="password" class="login__input pass_form form-control">
+
+                   <button>
+                    <span class="show_pass"><i class="fa-regular fa-eye"></i></span>
+                    <span class="hide_pass" ><i class="fa-regular fa-eye-slash"></i></i></span>
+                   </button>
+                </div>
+
+                <div>
+                    <p class="login__signup">
+                       You do not have an account? <a href="#">Sign up</a>
+                    </p>
+        
+                    <a href="#" class="login__forgot">
+                       Forgotten password?
+                    </a>
+        
+                    <button type="submit" class=" btn login__button">Log In</button>
+                 </div>
+             </div>
+        </div>
+    </div>
+        <!-- ====== Log-IN END ======= -->
+
+        <!-- ======= Offcanvas START ====== -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+            <img src="./assets/images/Logo.png" alt="">
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="canvas">
+            <ul class="list">
+                <li>
+                    <a class="homeActive" href="#">Home</a>
+                </li>
+                <li> 
+                    <a href="#">Shop</a>
+                </li>
+                <li>
+                    <a href="#">Feature's</a>
+                </li>
+                <li>
+                    <a href="#">Page's</a>
+                </li>
+                <li>
+                    <a href="#">Blogs</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <ul class="canvasIcons">
+                <li class="search__icon"><a href="#"> <span><i class="fa-solid fa-magnifying-glass"></i></span> </a></li>
+                <li class="user__icon"><a href="#"><span><i class="fa-regular fa-user"></i></span> </a></li>
+                <li><a href="#"><span><i class="fa-regular fa-heart"></i></span> </a></li>
+                <li class="shopping"><a href="#"> 
+                        <span><i class="fa-solid fa-bag-shopping"></i></span> 
+                        <span class="zero">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+        <!-- ======= Offcanvas END ======= -->
+
+    <!-- ============== NAV END ============== -->
+
+    <!-- ============== BANNER START ============== -->
+     <section id="banner" >
+        <div class="slider">
+            <div class="container">
+                <h5>Mega Sale</h5>
+                <h2>Up To 35% Off</h2>
+                <p>Objectively incubate enabled innovation through leveraged mindshare. Competently.</p>
+                <a href="#">Shop Now <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                
+            </div>
+        </div>
+     </section>
+    <!-- ============== BANNER END ============== -->
+
+
 
 
 <!-- ============== JQUERY ============== -->

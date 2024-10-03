@@ -22,4 +22,372 @@ li{
     width: 1170px;
     margin: auto;
 }
+:root {
+	--text-color: #11161e;
+	--d-primary-color: #151a32;
+	--comon-colot: #fff;
+	--st-primary-color: #ff6f61;
+	--paragraph-color: #444;
+	--nd-primary-color: #ff5645;
+	--background-color: #f1f1f1;
+	--bg: #f1f3f4;
+	--black: #000;
+	--a6aab7: #a6aab7;
+    --font-family: "Josefin Sans", sans-serif;
+    --second-family: "Roboto", sans-serif;
+  }
             /* Css common */
+
+/* ====================== NAV START ====================== */
+nav ul li a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--text-color);
+    padding: 0 21px;
+    transition: 0.2s;
+}
+nav ul li a:hover{
+    color: var(--st-primary-color);
+}
+nav .icons{
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+nav .icons li a{
+    padding: 0 10px !important;
+}
+nav ul li .homeActive{
+    color: var(--nd-primary-color);
+}
+nav .icons .shopping {
+    position: relative;
+}
+nav .icons .zero{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--st-primary-color);
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    right: 2px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--comon-colot);
+}
+nav .navbar-toggler{
+    border: none;
+}
+/* --------Search Start-------- */
+.search{
+    width: 100%;
+    height: 100vh;
+    background: var(--text-color);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s all;
+}
+.search.search_active{
+    visibility: visible;
+    opacity: 1;
+}
+.search form{
+    width: 100%;
+    max-width:0px;
+    display: flex;
+    transition: 0.5s;
+}
+.search form.form_active{
+    max-width:400px;  
+}
+.search form input{
+    border: none;  
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 50px 0  0px 50px;
+}
+.search form input::placeholder{
+    color: var(--black);
+}
+.search form button{
+    width: 20%;
+    border: none;
+    background: var(--st-primary-color);
+    color: var(--bg);
+    border-radius: 0 50px 50px 0;
+}
+.search .cross_btn{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 3px solid var(--st-primary-color);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+    color: var(--bg);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.search .cross_btn:hover{
+    transform: rotate(180deg);
+    border: 3px solid var(--comon-colot);
+    color: var(--st-primary-color);
+}
+/* --------Search End-------- */
+
+/* -------- Log-In Start-------- */
+.log_in{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--d-primary-color);
+    font-family: var(--font-family);
+    /* background-color: hsla(230, 75%, 15%, .1);
+    backdrop-filter: blur(20px); */
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s all;
+}
+.log_in.turniton{
+    visibility: visible;
+    opacity: 1;
+}
+.log-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    background-color: #f0f8ff;
+    border-radius: 25px;
+    height: 500px;
+}
+.log-box h5{
+    font-size: 25px;
+    padding: 30px 0 20px 0;
+    font-family: var(--font-family);
+    
+}
+.login__label {
+    display: block;
+    text-align: left;
+    /* color: #000; */
+    font-weight: 500;
+    width: 100%;
+}
+.login__input {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #D3D3D3;
+    padding: 1rem;
+    border-radius: .5rem;
+    /* color: #222f3e; */
+    margin-bottom: 20px;
+}
+.login__group{
+    width: 85%;
+}
+.login__signup{
+    /* color: #848884; */
+    font-size: 15px;
+}
+.login__signup a,
+.login__forgot {
+    color: #1F51FF;
+    font-size: 18px;
+}
+.login__button{
+    display: block;
+    width: 100%;
+    background-color: var(--st-primary-color);
+    color: #fff;
+    margin: 30px 0 40px 0;
+}
+.login__button:hover{
+    border: 1px solid #222f3e;
+    color: var(--nd-primary-color);
+}
+.log__close{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 3px solid var(--st-primary-color);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: var(--bg);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.log__close:hover{
+    transform: rotate(180deg);
+    border: 3px solid var(--comon-colot);
+    color: var(--st-primary-color);
+}
+.input_pass button{
+    height: 35px;
+    width: 35px;
+    border: none;
+    background-color: #fff;
+    /* background-color: #0a3d62; */
+    position: absolute;
+    top: 48px;
+    right: 13px;
+    overflow: hidden;
+}
+.input_pass button span{
+    font-size: 21px;
+    display: block;
+}
+.input_pass{
+    position: relative;
+}
+.show_pass.margup{
+    margin-top: -35px;
+}
+
+/* -------- Log-In End-------- */
+
+/* -------- OFFCANVAS Start-------- */
+.canvas ul{
+    padding: 0;
+}
+.canvas .list li a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--text-color);
+    padding-left: 20px;
+    /* padding: 21px 0; */
+    transition: 0.2s;
+}
+.canvas .list li{
+    padding: 8px 0;
+    cursor: pointer;
+}
+.canvas .list li:hover{
+    background-color: var(--st-primary-color);
+}
+.canvas .list li:hover a{
+    color: var(--comon-colot);
+}
+.canvasIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canvasIcons li a{
+    padding: 0 10px !important;
+}
+.canvasIcons ul li .homeActive{
+    color: var(--nd-primary-color);
+}
+.canvasIcons .shopping {
+    position: relative;
+}
+.canvasIcons .zero{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--st-primary-color);
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    right: 2px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--comon-colot);
+}
+
+.canvasIcons a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--text-color);
+    padding-left: 20px;
+    transition: 0.2s;
+}
+.canvasIcons a:hover{
+    color: var(--nd-primary-color);
+}
+
+/* -------- OFFCANVAS End-------- */
+
+/* ======================  NAV END ====================== */
+
+/* ====================== BANNER START ====================== */    
+#banner .slider{
+    height: 700px;
+    background-image: url('/assets/images/banner/1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner .slider h5{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: #1d1d1d;
+}
+#banner .slider h2{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 116%;
+    color: #1d1d1d;
+    padding: 14px 0 8px 0;
+}
+#banner .slider p{
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    color: #1d1d1d;
+    width: 454.91px;
+    padding: 8px 0 29px;
+}
+#banner .slider a{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--comon-colot);
+    background-color: var(--st-primary-color);
+    padding: 16px 37px;
+}
+/* ====================== BANNER END ====================== */
+
